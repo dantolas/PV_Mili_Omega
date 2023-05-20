@@ -6,7 +6,7 @@ import java.awt.*;
 public class BaseFrame extends JFrame{
     public BaseFrame(){
 
-
+        System.out.println("Working Directory = " + System.getProperty("user.dir"));
         //region <this configs>
         this.setTitle("ChatApp");
         this.setSize(720,480);
@@ -14,8 +14,8 @@ public class BaseFrame extends JFrame{
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
         this.setLayout(null); 
-        ImageIcon image = new ImageIcon("/main/resources/images/keboard.icon.png");        
-        this.setIconImage(image.getImage()); 
+        //ImageIcon image = new ImageIcon("app/src/main/resources/images/keboard.icon.png");        
+        //this.setIconImage(image.getImage()); 
         this.getContentPane().setBackground(new Color(0X00004C)); 
         //endregion
 
@@ -24,6 +24,6 @@ public class BaseFrame extends JFrame{
 
     public static void main(String[] args) {
         BaseFrame frame = new BaseFrame();
-        frame.setContentPane(new FirstContentPane());    
+        frame.setContentPane(new FirstContentPane(frame));    
     }
 }
