@@ -1,12 +1,14 @@
 package charming.GUI;
 
 import javax.swing.*;
+
+import charming.actualCode.JDBC;
+
 import java.awt.*;
 
 public class BaseFrame extends JFrame{
     public BaseFrame(){
 
-        System.out.println("Working Directory = " + System.getProperty("user.dir"));
         //region <this configs>
         this.setTitle("ChatApp");
         this.setSize(720,480);
@@ -23,7 +25,9 @@ public class BaseFrame extends JFrame{
     }    
 
     public static void main(String[] args) {
-        BaseFrame frame = new BaseFrame();
-        frame.setContentPane(new FirstContentPane(frame));    
+        //BaseFrame frame = new BaseFrame();
+        System.out.println("Working Directory = " + System.getProperty("user.dir"));
+        JDBC jdbc = new JDBC("null");   
+        //frame.setContentPane(new FirstContentPane(frame));    
     }
 }
