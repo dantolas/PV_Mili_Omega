@@ -27,7 +27,7 @@ public class BaseFrame extends JFrame{
     public static void main(String[] args) {
         //BaseFrame frame = new BaseFrame();
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
-        JDBC jdbc = new JDBC("null");   
+        JDBC jdbc = new JDBC("jdbc:mysql://localhost:3306/Users");   
         //frame.setContentPane(new FirstContentPane(frame));    
     }
 }
